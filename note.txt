@@ -1,0 +1,66 @@
+DOM 
+
+=================
+-Document Object Model
+-it represents the structure of an HTML Document as a Heirarchial tree of objects
+-It allows script to manipulate the content structure and style dynamically
+-while browser loads the html page,it creates a DOM and renders
+-JS access this DOM elemnent and manipulate it
+-DOM element are called notes
+
+How to apply Javascript in HTML file
+-------------------------------------
+1)internal
+-JS Code is written in the same HTML file
+-script tag is used to add JS Code
+<script>
+     // JS Code
+</script>
+-best practice to add script tag is at the end of the body tag \
+-to ensure HTML content is fully loaded before the script executes
+-Avoid blocking the rendering of page
+-IF some js codes are needed,beore the HTML page loads,we can add the script in HEAD tag
+-eg: bootstrap JS cdn
+2)external
+-more preferable
+- <script url = "js_file_location"></script>
+-it reduces code complexity and code can be re-uesd in other html files
+
+How to access HTML Elements using JS
+-------------------------------------
+1)Accesing HTML tag
+-document.getElementsByTagName('tagname')
+-it returns HTML Collection
+-similiar to array
+-we need to convert thsi HTML collection into array,for accesing this tags
+2) Access html element by id
+- document.getElementById('id)
+-it return that specific html dom element
+
+3) Access DOM element by class 
+- documet.getelementByClassName (“class_name”)
+- return HTML collection 
+- need to convert it into array before using it
+ 
+ 
+4) By using Query selector 
+- document.QuearySelector(‘tagName/ # id_Name /. Class_Name”)
+- It return only the first tag
+ 
+ 
+5) By using query selector all
+- document.QuearySelector(‘tagName/ # id_Name /. Class_Name”)
+- return all item 
+- it return node list - similar like array
+- nut not pure array , so map will no work 
+- we can use foreach
+
+6)Access content of an HTML tag
+-.innerHTML is used for that
+
+
+Events 
+=================================
+ACTION performed by the user ,that may leads to DOM Updation
+-eg:button click,mouse hover,typing value in input field,key down,key Up
+-onclick,onchange

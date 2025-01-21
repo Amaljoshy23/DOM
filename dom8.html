@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2" style="color: red;">
+        Hello world
+   </h2>
+   <button onclick="changecolr()">blue color</button>
+   <button onclick="green()">green buton</button>
+   <button onclick="toggleColor()">toggleColor</button>
+
+   <script>
+       function changecolr(){
+           var changecolr = document.getElementById("h2")
+           changecolr.style.color="blue"
+       }
+       function green(){
+        alert("color change")
+           var green = document.getElementById("h2")
+           green.style.color="green"
+       }
+       function toggleColor(){
+           var h2 = document.getElementById("h2")
+           if (h2.style.color == "red"){
+               h2.style.color = "yellow"
+           }else{
+               h2.style.color = "red"
+           }
+       }
+
+
+
+   </script>
+
+
+
+
+
+</body>
+</html>

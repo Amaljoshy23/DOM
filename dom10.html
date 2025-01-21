@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- // create two input field, one button and add number  -->
+ <div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h3 class="text-primary mt-5 text-center">ADD NUMBERS</h3>
+ 
+    <form class="border border-primary mt-5 p-3 rounded">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">FIRST NUM</label>
+          <input type="number" class="form-control" id="num1" aria-describedby="emailHelp">
+         
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">SECOND NUM</label>
+          <input type="number" class="form-control" id="num2">
+        </div>
+       
+        <button type="button" class="btn btn-primary" onclick="addNumbers()">ADD</button>
+        <button type="button" class="btn btn-secondary" onclick="clearFields()">CLEAR</button>
+ 
+      </form>
+<h5 class="mt-2 text-success" id="res_value">RESULT : </h5>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+ </div>
+    <script>
+        function addNumbers(){
+           
+            var firstNum = document.getElementById("num1");
+            var secondNum = document.getElementById("num2");
+            var num1 = firstNum.value;
+            var num2 = secondNum.value;
+            if(!num1 || !num2){
+                alert("Please enter both numbers");
+            }else{
+                var result = parseInt (num1) + parseInt (num2);
+            }
+            document.getElementById("res_value").innerHTML = "RESULT : " + result;
+        }
+        function clearFields(){
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("res_value").innerHTML = "RESULT :";
+        }
+    </script>
+</body>
+</html>
