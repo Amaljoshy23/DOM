@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+ 
+    <button onclick="addtols()"> ADD TO LOCAL STORAGE</button>
+    <button onclick="getName()"> GET NAME</button>
+    <button onclick="ClearName()">ClearName</button>
+    <button onclick="addobject()">add object</button>
+    <button onclick="getObject()">GET OBJEC</button>
+ 
+    <h1 id="h1"></h1>
+ 
+ 
+    <script>
+        function addtols(){
+            var Name = 'Ajai'
+            localStorage.setItem('firstName',Name)
+ 
+            var email = 'ajai12346aji@gmail.com'
+            localStorage.setItem('email' , email)
+        }
+        function getName(){
+            var Name = localStorage.getItem("firstName")
+           
+            document.getElementById("h1").innerHTML = Name
+       
+ 
+        }
+        function ClearName(){
+            localStorage.removeItem("firstName")
+            localStorage.removeItem("email")
+            localStorage.removeItem("h1")
+        }
+        function addObject(){
+            const userDetails ={
+                name: "ciro",
+                age: 12,
+                location: "kochi"
+            }
+            localStorage.setItem("data",JSON.stringify(userDetails))
+        }
+       
+ 
+ 
+ 
+    </script>
+ 
+   
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addToSS()"> ADD TO SESSION STORAGE</button>
+    <br>
+    <br>
+    <button onclick="getFromSS()">Get from SS</button>
+    <button onclick="storeObject()">store js object</button>
+    
+    <button onclick="getObject()">Get js object</button>
+
+
+    <script>
+         function addToSS(){
+            var Name = 'Amal'
+            sessionStorage.setItem('firstName',Name)
+ 
+            var email = 'amal26aji@gmail.com'
+            sessionStorage.setItem('email' , email)
+        }
+        function getFromSS(){
+             alert(`${sessionStorage.getItem('email')},${sessionStorage.getItem('firstName')}`)
+            
+        }
+        function storeObject(){
+            var studentDetails = {
+                firstName: "amal",
+                lastName:"joshy",
+            }
+        }
+        function getObject(){
+            var temp = JSON.parse(sessionStorage.getItem("studentData"))
+            console.log(temp);
+            console.log(temp.firstName);
+ 
+            // second
+            var tempNew = sessionStorage.getItem("studentData")
+            var tempNew1 = JSON.parse(tempNew)
+            console.log(tempNew1.age);            
+        }
+    </script>
+
+
+</body>
+</html>
